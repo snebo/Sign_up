@@ -2,55 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./styles/page_styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/sign_up.css">
+
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/avara" type="text/css"/>
+
   <title>Sign Up</title>
 </head>
 <body>
-  <div class="container">
-    <div class="side-image">
-      <img id="logo" src="" alt="logo">
-      <div id="brand-name">Brand</div>
-    </div>
-    <div class="side-form">
-      <h3>This is not a real online service! You know you need someting
-        like this in your life to healp you realize your deepest dreams.
-        Sign up now to get started.</h3>
-      <h3>YOu <span>know</span> you want to.</h3>
-      
-      <form action="#" method="post">
-        <h3>Let's do this!</h3>
-        <ul>
-          <li>
-            <label for="fName">FIRST NAME</label>
-            <input type="text" name="first_name" id="fName" />
-          </li>
-          <li>
-            <label for="lName">LAST NAME</label>
-            <input type="text" name="last_name" id="lName">
-          </li>
-          <li>
-            <label for="email">EMAIL</label>
-            <input type="email" name="user_email" id="email">
-          </li>
-          <li>
-            <label for="num">PHONE NUMBER</label>
-            <input type="number" name="user_phone" id="num">
-          </li>
-          <li>
-            <label for=" pwd">PASSWORD</label>
-            <input type="password" name="user_passowrd" id="pwd">
-          </li>
-          <li>
-            <label for="verify_pwd">CONFIRM PASSOWRD</label>
-            <input type="password" name="user_pass" id="verify_pwd">
-          </li>
-        </ul>
-        <button type="submit">Create Account</button>
-      </form>
-      <p>Already have an account? <a href="#">Log in</a></p>
-    </div>
-  </body>
+  <!-- should have two sections one with image (30%) and the form -->
+  <div class="img_section">
+    <!-- would have the backgrond image -->
+    <div class="img_txt">
+      <img src="./assets/Beautiful-flower-on-transparent-PNG.png" alt="image_logo" id="logo" width="120px" height="120px">
+      <h1>GARDEN</h1>
+    </div>  
+    <p id="img_credit">Photo by <a href="https://unsplash.com/@aaroncook?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aaron Cook</a> on 
+      <a href="https://unsplash.com/photos/a-bunch-of-yellow-flowers-that-are-blooming-4XJK9eIsvNU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a><span> Unsplash</span>
+    </p>
   </div>
+
+  <div class="form_section">
+    <!-- have padding on T&B and L&R to aligin section -->
+    <h3>This is not a real online service! You know you need someting
+      like this in your life to healp you realize your deepest dreams.<br>Sign up now to get started.</h3>
+    <h3>You <i>know</i> you want to.</h3>
+
+    <div class="main_form">
+      <h3>Let's do this!</h3>
+      <div class="form_container">
+        <form action="#" method="post">
+          <ul>
+            <li>
+              <label for="fName">FIRST NAME <strong>*</strong></label>
+              <input type="text" name="first_name" id="fName" required/>
+            </li>
+            <li>
+              <label for="lName">LAST NAME<strong>*</strong></label>
+              <input type="text" name="last_name" id="lName" required>
+            </li>
+            <li>
+              <label for="email">EMAIL<strong>*</strong></label>
+              <input type="email" name="user_email" id="email" required>
+            </li>
+            <li>
+              <label for="num">PHONE NUMBER</label>
+              <input type="number" name="user_phone" id="num">
+            </li>
+            <li>
+              <label for=" pwd">PASSWORD<strong>*</strong></label>
+              <input type="password" name="user_passowrd" id="pwd" required>
+              <p class="error_msg"></p>
+            </li>
+            <li>
+              <label for="verify_pwd">CONFIRM PASSOWRD<strong>*</strong></label>
+              <input type="password" name="user_pass" id="verify_pwd" required>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    
+    <button class="send" type="submit">Create Account</button>
+    <p>Already have an account? <a href="#">Log in</a></p>
+  </div>
+  
+  <script src="./scripts/pwd_check.js"></script>
 </body>
 </html>
