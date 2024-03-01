@@ -1,34 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-size: 1em; */
 }
+
 body{
   display: flex;
   height: 100vh;
+  font-family: 'AvaraBold', Arial, Helvetica, sans-serif;
+  
+}
+a{
+  text-decoration: none;
+  color: rgb(221, 167, 17);
+  transition: 250ms;
+}
+a:hover{
+  font-size: 1.1em;
 }
 .img_section{
-  width: max(40vw, 800px);
+  width: max(40vw, 50%);
   height: 100%;
-  background-color: #faebd7;
+  background-image: url(../assets/aaron-cook-4XJK9eIsvNU-unsplash\ \(1\).jpg);
+  background-size: 1000px;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .img_txt{
-  margin: auto;
+  /* margin: auto; */
+  margin-top: auto;
+  height: 20%;
   display:flex;
   align-items: center;
-}
-.img_section p{
+  justify-content: center;
+  background-color: #00000085;
   color: white;
-  text-shadow: 1px 2px #ccc;
+}
+.img_section p, .img_section a{
+  color: white;
+  text-shadow: 1px 2px #465f1f;
   margin-bottom: 20px;
   margin-top: auto;
   text-align: center;
 }
-
+h1{
+  font-family: "Madimi One", sans-serif;
+}
 ul{
   list-style: none;
 }
@@ -36,28 +56,33 @@ ul li{
   width: 35%;
   padding: 10px 0;
 }
+.error_msg{
+  padding: 0;
+  font-size: 0.8em;
+  color: red;
+}
 h3{
-  padding: 10px 5vw;
+  padding: 10px 3vw;
   max-width: 750px;
 }
 .form_section{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: whitesmoke
 }
 .main_form{
-  margin-top: 50px;
-  padding: 16px 5vw;
-  /* background-color: aquamarine; */
+  margin: 3% 0;
+  padding: 4%;
+  background-color: white;
   border: 1px solid #ccc;
-  box-shadow: 5px 5px #ccc;
-  border-radius: 5px;
+  box-shadow: 2px 4px #ccc;
 }
 .main_form h3{padding: 10px 0}
 .form_container ul{
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 label{
   display:flex;
@@ -65,19 +90,49 @@ label{
   text-align: right;
 }
 input{
-  min-width: 300px;
+  min-width: 200px;
   height: 30px;
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
 }
-ul li{
-  padding-right: 40px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:focus{
+  outline: none;
+  border: 2px solid orange;
+  box-shadow: 1px 1px 5px black;
 }
 button{
+  font-size: 1.1em;
   width:200px;
   height: 40px;
-  margin: 1.3em 5vw;
+  margin: 1em 3vw;
   border-radius: 5px;
   border: 1px solid ;
+  background-color: rgb(221, 167, 17);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 250ms;
+}
+button:hover{
+  scale: 1.05;
+}
+button:disabled{
+  background-color: grey;
+  cursor:default;
+}
+button:disabled:hover{
+  scale: 1;
 }
 .form_section p{
-  margin-left: 5vw;
+  margin-left: 3vw;
+}
+.error{
+  outline: none;
+  border: 1px solid red;
+  /* box-shadow: 1px 1px 5px red; */
 }
